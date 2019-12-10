@@ -23,7 +23,7 @@ Bitblue_ble_app::Bitblue_ble_app(char L, char R, char U, char D, char Se, char S
 void Bitblue_ble_app::init(){
 	bltSerial.begin(9600);
 	while (!Serial); 						// while the serial stream is not open, do nothing.
-	bltSerial.write("BLE Connected!");		// send message on serial coommunication device.
+	bltSerial.write("BLE Connected!");				// send message on serial coommunication device.
 	bltSerial.flush(); 						// ensure all serial string to be finished sending before exiting.
   	
 }
@@ -116,13 +116,7 @@ void Bitblue_ble_app::ch_to_byte(){
 				_dis[i] = (_dis[i] << 4) + (_buf[j] - 55);
 			}				
 		}
-		//Serial.print(_dis[i]);
-		//if(i < 3){
-		//	Serial.write(",");
-		//}
 	}
-	
-	//Serial.write("-");
 }
 
 void Bitblue_ble_app::clear_data(){
@@ -182,13 +176,6 @@ byte Bitblue_ble_app::remote_control(byte *speed, byte *default_speed, byte *mod
 					i=0;				
 				}
 			}
-			//Serial.write("m");
-			//Serial.print(motor);
-			//Serial.write(":");
-			//Serial.print(speed[motor]);
-			//if(motor == 0){
-			//	Serial.write(",");
-			//}
 		}
 		Serial.write("-");
 		if(_mod == 2){
@@ -225,8 +212,6 @@ byte Bitblue_ble_app::remote_control(byte *speed, byte *default_speed, byte *mod
 				}
 			}
 		}
-		//Serial.write("dir:");
-		//Serial.print(_direction);
 		_read_seq = 0;
 		clear_data();
 	}
