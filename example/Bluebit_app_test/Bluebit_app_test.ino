@@ -36,8 +36,6 @@ void loop() {
     Serial.write(",m2:");
     Serial.print(motor_speed[1]);
     Serial.write(",dir:");
-    Serial.print(dir);
-    Serial.write(",mode:");
-    Serial.println(mode);
+    Serial.println(dir);
   }    
 }
