@@ -26,8 +26,6 @@ class Bitblue_ble_app{
      ********************************************************/
     byte remote_control(byte *speed, byte *default_speed, byte *mode);
 
-	//add mode selection
-
  private:
 	byte _read_seq = 0;
 	char _k[10];				//app keypad setting
