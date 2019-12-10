@@ -39,13 +39,6 @@ void Bitblue_ble_app::read_data(){
 	if( (_mod == 2) || ((_mod >=3) && (_id / _mod >= 4)) ){
 		_read_seq = 1;
 		clear_data();
-		Serial.write("P:");
-		Serial.write(_buf);
-		Serial.write(",i:");
-		Serial.print(_id);
-		Serial.write(",m:");
-		Serial.print(_mod);
-		Serial.write("-");
 		if( _mod >= 3){
 			ch_to_byte();
 		}
