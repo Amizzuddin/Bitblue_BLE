@@ -4,7 +4,7 @@
 
 // HM10 module         	  TX  		 Rx
 // ----------          --------   -------
-// Arduino Uno        	  0          1
+// Arduino Uno        	  8          9
 
 //You also require the change the following 
   
